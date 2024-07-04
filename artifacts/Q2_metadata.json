@@ -4,7 +4,104 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "Add",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "Div",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "Mul",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "b",
+						"type": "uint256"
+					}
+				],
+				"name": "Sub",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +130,11 @@
 	},
 	"sources": {
 		"solidity100.sol": {
-			"keccak256": "0xc4605ab77ae051a1b595fe08698a178997e90e7c25e5c555f99c19286f4aa6fc",
+			"keccak256": "0xff3fe2a8a34783c6e889321064df1643ccf8602b377fd319d0fef0dcdb642375",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://944051c2c122b73cbe8ddf15d2aa528cd807f21fb6842df769b71f15747ecaea",
-				"dweb:/ipfs/Qmc5Ahi2R2J7BBNQieFX5StDowfvzbhchDCJs12aZsKEb1"
+				"bzz-raw://ea17f3313bb3a7aa1f75695ea5ac207560de6775a414038dfb31ffa10b086f18",
+				"dweb:/ipfs/QmbdqUUvrM1U42KitumaGwtc7Sgsnsk5UTWHErtQsaGgip"
 			]
 		}
 	},
