@@ -40,7 +40,8 @@ contract Test1 {
         students.push(Student(_name, _number, _score, _grade));
     }
 
-    function getStudentName(string memory _name) public view returns (string memory, uint, uint, string memory) {
-        for
+    function getStudent(uint _n) public view returns(Student memory) {
+        return students[_n-1];
+    }
            
 }

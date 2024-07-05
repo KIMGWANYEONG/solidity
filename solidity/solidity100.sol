@@ -91,13 +91,33 @@ contract Q5 {
         7~9를 입력하면 입력한 수를 3으로 나눈 나머지를 반환받습니다.
     */
 
-    
+    function Return(uint _n) public pure returns(uint) {
+        if(_n>0 && _n<=3) {
+            return _n**2;
+        } else if(_n>3 && _n<=6) {
+            return _n*2;
+        } else if(_n>6 && _n<=9) {
+            return _n%3;
+        } else {
+            return 0;
+        }
+    }
 }
+
+
 
 contract Q6 {
     /* 
         숫자만 들어갈 수 있는 array numbers를 만들고 그 array안에 0부터 9까지 자동으로 채우는 함수를 구현하세요.(for 문)
     */
+    
+    uint[] numbers;
+
+    function setNum() public {
+        for(uint i=0; i<10; i++) {
+            numbers.push(i);
+        }
+    }
 }
 
 contract Q7 {
@@ -105,6 +125,22 @@ contract Q7 {
         숫자만 들어갈 수 있는 array numbers를 만들고 그 array안에 0부터 5까지 자동으로 채우는 함수와 
         array안의 모든 숫자를 더한 값을 반환하는 함수를 각각 구현하세요.(for 문)
     */
+
+    uint[] numbers;
+
+    function setNumbers() public {
+        for(uint i=0; i<6; i++) {
+            numbers.push(i);
+        }
+    }
+
+    function allNum() public view returns(uint) {
+        uint all;
+        for(uint i=0; i<numbers.length; i++) {
+            all += numbers[i];
+        }
+        return all;
+    }
 }
 
 contract Q8 {
@@ -114,12 +150,26 @@ contract Q8 {
         11~20을 입력하면 “B” 반환받습니다.
         21~30을 입력하면 “C” 반환받습니다.
     */
+
+    function Num(uint _n) public pure returns(string memory) {
+        if(_n>0 && _n<=10) {
+            return "A";
+        } else if(_n>10 && _n<=20) {
+            return "B";
+        } else if(_n>20 && _n<=30) {
+            return "C";
+        }
+    }
 }
 
 contract Q9 {
     /* 
         문자형을 입력하면 bytes 형으로 변환하여 반환하는 함수를 구현하세요.
     */
+
+    function changebytes(string memory _str) public pure returns(bytes memory) {
+        return bytes(_str);
+    }
 }
 
 contract Q10 {
@@ -127,4 +177,18 @@ contract Q10 {
         숫자만 들어가는 array numbers를 선언하고 숫자를 넣고(push), 빼고(pop), 
         특정 n번째 요소의 값을 볼 수 있는(get)함수를 구현하세요.
     */
+
+    uint[] numbers;
+
+    function push(uint _n) public {
+        numbers.push(_n);
+    }
+
+    function pop() public {
+        numbers.pop();
+    }
+
+    function getNum(uint _n) public view returns(uint) {
+        return numbers[_n-1];
+    }
 }

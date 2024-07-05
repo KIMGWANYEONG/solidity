@@ -48,47 +48,41 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getStudentCount",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
 					}
 				],
-				"name": "getStudentName",
+				"name": "getStudent",
 				"outputs": [
 					{
-						"internalType": "string",
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "grade",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Test1.Student",
 						"name": "",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
@@ -157,11 +151,11 @@
 	},
 	"sources": {
 		"cordingtest/cordingtest.sol": {
-			"keccak256": "0xc205033dbc044a39c130c0b4d1c011095b37ce84c877066b636c908f3622093b",
+			"keccak256": "0x60ecc6d162597812dcab2ace301e53e92aca3e7f97f78525d4716872bb0ef3e8",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://54d9ba185ae6d6e7c4f662f154451de968edc8803660d95569561a61a705eb73",
-				"dweb:/ipfs/QmT3VUxjKDjup9rLutZKkkCyNdWBEz1u6bRUvgibmvrVjw"
+				"bzz-raw://7827202030faf8dd777885f323256303d5849dcf4c002910347f464b58454e50",
+				"dweb:/ipfs/Qmci73YeLaMcWFqztzSYDzrY1kNGFwB9JPacbmetP3HkQj"
 			]
 		}
 	},
