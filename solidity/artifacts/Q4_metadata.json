@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity/solidity100.sol": "Q4"
+			"solidity/solidity1~10.sol": "Q4"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -32,7 +32,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity/solidity100.sol": {
+		"solidity/solidity1~10.sol": {
 			"keccak256": "0x5f239f07805b3e7d99e765b067fc6f1c946d5da8bf4d0c298d17318dcc9a99a9",
 			"license": "GPL-3.0",
 			"urls": [
