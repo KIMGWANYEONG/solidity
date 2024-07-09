@@ -326,7 +326,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"cordingtest/cordingtest2.sol": "Test1"
+			"cordingtest/cordingtest1.sol": "Test1"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -340,12 +340,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"cordingtest/cordingtest2.sol": {
-			"keccak256": "0xfdbd162c8fd1c2a59e01cd2b11d68e61109d14918a233621f1f7ea9d92ed4afb",
+		"cordingtest/cordingtest1.sol": {
+			"keccak256": "0x7315e7e981bd50c0433402b42cfe0a52038450ceb6715a0d2e787f5f3c935a1f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6a039e96303547467ab051a4377024ea21807ecb5c0f418774764f427a390f12",
-				"dweb:/ipfs/QmWXBAZMJopi6y6bkfd1s7R8CGgvw5dfsES4GSPmNv2bjc"
+				"bzz-raw://650b8833bd9966aa1f9f81c0ac82902265c89854ed95a975d8385875166df232",
+				"dweb:/ipfs/QmedHDw3jBQcDRoS1vFnFgqoJ5bGHS5MbXuBY28KiENtCu"
 			]
 		}
 	},
