@@ -6,28 +6,28 @@ contract Q1 {
     /* 
         더하기, 빼기, 곱하기, 나누기 그리고 제곱을 반환하는 계산기를 만드세요. 
     */
-    function Add(uint a, uint b) public pure returns(uint) {
-        return a+b;
+    function Add(uint _a, uint _b) public pure returns(uint) {
+        return _a+_b;
     }
 
-    function Sub(uint a, uint b) public pure returns(uint) {
-        return a-b;
+    function Sub(uint _a, uint _b) public pure returns(uint) {
+        return _a-_b;
     }
 
-    function Sub2(int a, int b) public pure returns(int) {
-        return a-b;
+    function Sub2(int _a, int _b) public pure returns(int) {
+        return _a-_b;
     }
 
-    function Mul(uint a, uint b) public pure returns(uint) {
-        return a*b;
+    function Mul(uint _a, uint _b) public pure returns(uint) {
+        return _a*_b;
     }
 
-    function Div(uint a, uint b) public pure returns(uint, uint) {
-        return (a/b, a%b);
+    function Div(uint _a, uint _b) public pure returns(uint, uint) {
+        return (_a/_b, _a%_b);
     }
     
-    function Pow(uint a, uint b) public pure returns(uint) {
-        return a**b; 
+    function Pow(uint _a, uint _b) public pure returns(uint) {
+        return _a**_b; 
 }
 }
 
@@ -37,20 +37,20 @@ contract Q2 {
         나누기(몫)를 실행합니다.
     */
 
-    function Add(uint a, uint b) public pure returns(uint) {
-        return a+b;
+    function Add(uint _a, uint _b) public pure returns(uint) {
+        return _a+_b;
     }
 
-    function Sub(uint a, uint b) public pure returns(uint) {
-        return a-b;
+    function Sub(uint _a, uint _b) public pure returns(uint) {
+        return _a-_b;
     }
 
-    function Mul(uint a, uint b) public pure returns(uint) {
-        return a*b;
+    function Mul(uint _a, uint _b) public pure returns(uint) {
+        return _a*_b;
     }
 
-    function Div(uint a, uint b) public pure returns(uint) {
-        return a/b;
+    function Div(uint _a, uint _b) public pure returns(uint) {
+        return _a/_b;
     }
 }
 
@@ -158,7 +158,8 @@ contract Q8 {
             return "B";
         } else if(_n>20 && _n<=30) {
             return "C";
-        }
+        } else 
+            return "";
     }
 }
 

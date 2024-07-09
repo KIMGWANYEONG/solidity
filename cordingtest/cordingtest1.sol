@@ -131,4 +131,23 @@ struct Student {
         }
         return (count, FStudents);
     }
+
+    function sClass() public view returns(Student[] memory) {
+    Student[] memory _students = students;
+    for(uint i=0; i<_students.length; i++) {
+        for(uint j=i+1; j<_students.length; j++) {
+            if(_students[i].score < _students[j].score) {
+                (_students[i], _students[j]) = (_students[j], _students[i]);
+            }
+        }
+    }
+
+    Student[] memory _s = new Student[](4);
+    for(uint i=0; i<4; i++) {
+        _s[i] = _students[i];
+    }
+
+    return _s;
+    }
 }
+

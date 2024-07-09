@@ -274,6 +274,46 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "sClass",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "grade",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "class",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Test1.Student[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -341,11 +381,11 @@
 	},
 	"sources": {
 		"cordingtest/cordingtest1.sol": {
-			"keccak256": "0x7315e7e981bd50c0433402b42cfe0a52038450ceb6715a0d2e787f5f3c935a1f",
+			"keccak256": "0x24a49ed648d0d51287b2ec06cf1d4c46c4c28494219c1fe569663c3e09d26993",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://650b8833bd9966aa1f9f81c0ac82902265c89854ed95a975d8385875166df232",
-				"dweb:/ipfs/QmedHDw3jBQcDRoS1vFnFgqoJ5bGHS5MbXuBY28KiENtCu"
+				"bzz-raw://d119d6df50602c41f19f57ef138278546d05e456f82d0ca277bab924ad7f4ae9",
+				"dweb:/ipfs/QmdHyxUQNLYifQbACmPXHovuQyCDxTksMrC9JQoLPfegPK"
 			]
 		}
 	},
