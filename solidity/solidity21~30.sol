@@ -69,8 +69,8 @@ contract Q25 {
     function array(uint _n) public pure returns (uint[] memory) {
         uint[] memory A = new uint[](_n+1);
 
-        for (uint i=0; i <= _n; i++) {
-            A[i] =_n-i;
+        for (uint i=0; i<=_n; i++) {
+            A[i] = _n-i;
         }
 
         return A;
@@ -86,7 +86,7 @@ contract Q26 {
     uint[] evenArray;
 
     function splitOddEven(uint[] memory _numbers) public {
-        for (uint i = 0; i < _numbers.length; i++) {
+        for (uint i=0; i<_numbers.length; i++) {
             if (_numbers[i]%2==0) {
                 evenArray.push(_numbers[i]);
             } else {
