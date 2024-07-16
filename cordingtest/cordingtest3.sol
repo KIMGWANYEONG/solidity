@@ -49,7 +49,7 @@ abi.encodePacked() 사용하기
         if (passwordHash == user.password) {
           return "Login";
         } else {
-            if (user.loginAttempts + 1 >= 5) {
+            if (user.loginAttempts +1 >= 5) {
                 return "Password attempts have exceeded 5 times. Raises a security warning.";
             } else {
                 return "passwords do not match.";

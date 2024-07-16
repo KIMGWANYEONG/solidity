@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
+					}
+				],
+				"name": "convertSeconds",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"cordingtest/cirdubgtest5.sol": "Test5"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"cordingtest/cirdubgtest5.sol": {
+			"keccak256": "0x77129b4c3fc1a9ee986842b463e7095d97476fa727b5a35556bac2b0ca661e8b",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f95d3662474ca63efebd2e736d83e28e3c06276eabdf49b8cfda1d0c35176b9e",
+				"dweb:/ipfs/QmZ6x45o1BLYEXezFE1bpMq4sD9hEutp5wtovpD9miNhS6"
+			]
+		}
+	},
+	"version": 1
+}
