@@ -82,11 +82,11 @@
 	},
 	"sources": {
 		"cordingtest/cordingtest6.sol": {
-			"keccak256": "0x7b00881f74c8fe07bf6799417d72901d2d9bdd65835f69d54c3d0474fce3c05b",
-			"license": "MIT",
+			"keccak256": "0xeda22b5837713968086b8453f89a516974d66f458d8c004713f88af6cdbfbded",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3f9c453a5da7ecc37045a81ba9fddcbf0b2c701dcd4d0565ece53161cfb5354e",
-				"dweb:/ipfs/QmVyt5n5KxbWWkSstRGm6v4bXAd8VSzNxt16e3WfweZiwa"
+				"bzz-raw://ee0876c79c38833f5924b9e8f1de3394ce0d692e7c3b50526cc8b8c2fc69ab68",
+				"dweb:/ipfs/QmNNJFpSmtMpTa2T5DbScVMnPacG8Loi9MTWrwk1Q25QRL"
 			]
 		}
 	},
