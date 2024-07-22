@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "isAliceOrBob",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"solidity/solidity31~40.sol": "Q31"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"solidity/solidity31~40.sol": {
+			"keccak256": "0xbf04ec15c10608bfd20218fde28bb2a2d7d5bb04ac1fc0f7ef718802e1d121d5",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://9872eb8d587da0e9f4a5282c6f100670698cc4684c5e105efae1d0c90a3b59e8",
+				"dweb:/ipfs/QmVTnUL5RoJRagtTeThS9BswY8XpvUigRQ9Jh7Q621BDCC"
+			]
+		}
+	},
+	"version": 1
+}
