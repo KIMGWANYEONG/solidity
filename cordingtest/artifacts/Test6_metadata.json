@@ -1,0 +1,94 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "splitNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "str",
+						"type": "string"
+					}
+				],
+				"name": "splitString",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"cordingtest/cordingtest6.sol": "Test6"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"cordingtest/cordingtest6.sol": {
+			"keccak256": "0x7b00881f74c8fe07bf6799417d72901d2d9bdd65835f69d54c3d0474fce3c05b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3f9c453a5da7ecc37045a81ba9fddcbf0b2c701dcd4d0565ece53161cfb5354e",
+				"dweb:/ipfs/QmVyt5n5KxbWWkSstRGm6v4bXAd8VSzNxt16e3WfweZiwa"
+			]
+		}
+	},
+	"version": 1
+}
