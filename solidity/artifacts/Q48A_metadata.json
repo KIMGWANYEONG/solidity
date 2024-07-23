@@ -9,45 +9,21 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "num",
+						"name": "_a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_b",
 						"type": "uint256"
 					}
 				],
-				"name": "splitNumber",
+				"name": "add",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					},
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "str",
-						"type": "string"
-					}
-				],
-				"name": "splitString",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string[]",
-						"name": "",
-						"type": "string[]"
 					}
 				],
 				"stateMutability": "pure",
@@ -67,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"cordingtest/cordingtest6.sol": "Test6"
+			"solidity/solidity41~50.sol": "Q48A"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -81,12 +57,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"cordingtest/cordingtest6.sol": {
-			"keccak256": "0x6297b57c19d447a2bd7da9f0994ab35e13049510321c8461a0075c381eaaabb6",
+		"solidity/solidity41~50.sol": {
+			"keccak256": "0x2301e50c6fe4cca9750f18b083f9a7b96499da333c372e1d9d996eb8ddff1bc9",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c8e3c099c761a2fe2795511c90a1acb512da05b5f67ee533c6841bdad0cbd051",
-				"dweb:/ipfs/QmU4bF1mrsNeyKzMPUnsbTbxotiPnxPMPwUwi9UiwSYp7v"
+				"bzz-raw://b1c3652f1db025243ee101e13e59f530b659e505e968f2f94e8034a6dd6114fb",
+				"dweb:/ipfs/QmWS1CqDL28ACLTqrj7b25xrZTDaDL2Q1H6i99rGKKRtNo"
 			]
 		}
 	},

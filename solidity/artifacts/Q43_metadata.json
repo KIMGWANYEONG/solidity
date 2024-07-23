@@ -6,14 +6,15 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
-					}
-				],
-				"name": "Pow",
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -21,26 +22,20 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_n",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
-				"name": "Pow2",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "pure",
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -57,7 +52,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity/solidity1~10.sol": "Q3"
+			"solidity/solidity41~50.sol": "Q43"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -71,12 +66,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity/solidity1~10.sol": {
-			"keccak256": "0xc9fa236d90ebfa37a7c74494247533280d9ab2ccfde747258c8a1d2c39da960e",
+		"solidity/solidity41~50.sol": {
+			"keccak256": "0x2301e50c6fe4cca9750f18b083f9a7b96499da333c372e1d9d996eb8ddff1bc9",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://56144491db721cd5f7fb64b5ff4058b447ab7c6a368f7865663446f8d7ba743a",
-				"dweb:/ipfs/QmW8Tz4Tvs8LDeidBMRdh6Ea18wYXF2GTKBdkC1HZFkmEP"
+				"bzz-raw://b1c3652f1db025243ee101e13e59f530b659e505e968f2f94e8034a6dd6114fb",
+				"dweb:/ipfs/QmWS1CqDL28ACLTqrj7b25xrZTDaDL2Q1H6i99rGKKRtNo"
 			]
 		}
 	},

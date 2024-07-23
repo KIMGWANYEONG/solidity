@@ -44,3 +44,4 @@ contract Test6 {
         return (length, chars);
     }
 }
+
