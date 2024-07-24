@@ -6,8 +6,21 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
+					}
+				],
+				"name": "addNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "getNum",
+				"name": "getNumbers",
 				"outputs": [
 					{
 						"internalType": "uint256[]",
@@ -22,13 +35,19 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_n",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "setNum",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "numbers",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -60,11 +79,11 @@
 	},
 	"sources": {
 		"solidity/solidity11~20.sol": {
-			"keccak256": "0xcaf22c03df27396672fa3743a97fcfe465c2db8deab7ebd4bf1011e46d49c668",
+			"keccak256": "0xacaa0f3812c2584185bf5f32fe1310a798ced41984049ec4643e40c9a733664d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://429ba22057029982951c0a2de44b546fcc2123fe371dfca00e544c9f46c5487d",
-				"dweb:/ipfs/QmWwwoAvMEugGx8W3kKMPZ6z6W4ngBbTicfN2edpVsRtqD"
+				"bzz-raw://b3fbe6a361dc7fcd5b74f0d61bab902db0bb2159af33a6b2cbb6703c43e482e0",
+				"dweb:/ipfs/QmUxVDScoDwED1BysX8BJy65Xdfm8sk9w9RT1A7zf2kF6x"
 			]
 		}
 	},

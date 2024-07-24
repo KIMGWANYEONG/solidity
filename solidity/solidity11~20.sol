@@ -151,22 +151,22 @@ contract Q20 {
         숫자만 들어가는 배열을 선언하고 숫자를 넣는 함수를 구현하세요. 
         15개의 숫자가 들어가면 3의 배수 위치에 있는 숫자들을 초기화 시키는(3번째, 6번째, 9번째 등등) 함수를 구현하세요. (for 문 응용 → 약간 까다로움)
     */
+    uint[] public numbers;
 
-    uint[] numbers;
-
-    function setNum(uint _n) public {
-        if (numbers.length < 15) {
-            require(numbers.length<15);
-            numbers.push(_n);
-        } else {
-            for (uint i=0; i<numbers.length; i++) {
-                if (i % 3 == 2) {
-                    delete numbers[i];
-                }
-            }
+    function addNumber(uint _number) public {
+        numbers.push(_number);
+        if (numbers.length == 15) {
+            reset();
         }
     }
-    function getNum() public view returns(uint[] memory) {
+
+    function reset() private {
+        for (uint i = 2; i < numbers.length; i += 3) {
+            numbers[i] = 0;
+        }
+    }
+
+    function getNumbers() public view returns (uint[] memory) {
         return numbers;
     }
 }
