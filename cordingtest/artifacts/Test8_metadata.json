@@ -1,0 +1,244 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getAllProposals",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "content",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "proposer",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "agreeCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "disagreeCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum Test8.ProposalStatus",
+								"name": "status",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct Test8.Proposal[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					}
+				],
+				"name": "getProposalByTitle",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "proposalTitle",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "proposalContent",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "proposer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "agreeCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "disagreeCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Test8.ProposalStatus",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getUserProposals",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "content",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "proposer",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "agreeCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "disagreeCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum Test8.ProposalStatus",
+								"name": "status",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct Test8.Proposal[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "propose",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "registerUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "agree",
+						"type": "bool"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"cordingtest/cordingtest8.sol": "Test8"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"cordingtest/cordingtest8.sol": {
+			"keccak256": "0x7603df8ab232bd3a59b57296e90c16cb1b3bdc1fb5720f36f0decbe53a23603a",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://8f6b83b6e1c0a3fad3a504b2a83cefec86d2e7a14b12bb63ee0edb956f400d30",
+				"dweb:/ipfs/QmUW3Y1u34UR3E7CdAAbqJALAayqZKih7v7763T8cxPTz5"
+			]
+		}
+	},
+	"version": 1
+}
