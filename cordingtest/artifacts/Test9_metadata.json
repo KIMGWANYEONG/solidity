@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_input",
+						"type": "string"
+					}
+				],
+				"name": "UpperLowerDigit",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"cordingtest/cordingtest9.sol": "Test9"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"cordingtest/cordingtest9.sol": {
+			"keccak256": "0xfb505405bf2dd2afb4ebad78e910f6e27ac2e6d6bd1544577dc542ee7538cda8",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://53bcac52868ac74a2764d60a49fd8bb19227cbf7bea1467f466b553984a0cb41",
+				"dweb:/ipfs/QmYGhjSc6BXt6pQ9dBdbEN1sX6V9hb6dVQi67KfdjkBrgD"
+			]
+		}
+	},
+	"version": 1
+}
