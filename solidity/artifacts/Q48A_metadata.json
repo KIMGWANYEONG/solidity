@@ -58,11 +58,11 @@
 	},
 	"sources": {
 		"solidity/solidity41~50.sol": {
-			"keccak256": "0x2301e50c6fe4cca9750f18b083f9a7b96499da333c372e1d9d996eb8ddff1bc9",
+			"keccak256": "0xe5720eacb9df435a74239f8f8191608ce5ebccd42538261871d02dba3ca94aa7",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b1c3652f1db025243ee101e13e59f530b659e505e968f2f94e8034a6dd6114fb",
-				"dweb:/ipfs/QmWS1CqDL28ACLTqrj7b25xrZTDaDL2Q1H6i99rGKKRtNo"
+				"bzz-raw://1fce3b4584bb79081d22dfa7b273c5e8ca4fa4efb9b438518eb0469ccbb93949",
+				"dweb:/ipfs/QmV8Q3vxRnVEMj1KWVMsz8DbfnyMPJSuAV8h4bm1hEVREu"
 			]
 		}
 	},

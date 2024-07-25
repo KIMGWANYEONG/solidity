@@ -15,16 +15,16 @@ contract Q32 {
     3의 배수이자 동시에 10의 배수이면 들어갈 수 없는 추가 조건도 구현하세요.
     예) 3 → o , 9 → o , 15 → o , 30 → x*/
 
-    uint[] public multiples;
+    uint[] numbers;
 
     function addNumber(uint _number) public {
         if (_number % 3 == 0 && _number % 10 != 0) {
-            multiples.push(_number);
+            numbers.push(_number);
         }
     }
 
     function getArray() public view returns (uint[] memory) {
-        return multiples;
+        return numbers;
     }
 }
 
@@ -55,18 +55,19 @@ contract Q33 {
 contract Q34 {
     /*이름, 번호, 점수가 들어간 학생 구조체를 선언하세요. 
     학생들을 관리하는 자료구조도 따로 선언하고 학생들의 전체 평균을 계산하는 함수도 구현하세요.*/
-        struct Student {
+    struct Student {
         string name;
+        uint number;
         uint score;
     }
 
-    mapping(uint => Student) students;
+    Student[] studentList;
     uint totalScore;
     uint studentCount;
 
-    function addStudent(uint _id, string memory _name, uint _score) public {
-        
-        students[_id] = Student(_name, _score);
+    function addStudent(string memory _name, uint _number, uint _score) public {
+        Student memory newStudent = Student(_name, _number, _score);
+        studentList.push(newStudent);
         totalScore += _score;
         studentCount++;
     }
