@@ -12,26 +12,26 @@ contract Test9 {
 알려주는 함수를 구현하세요.
 */
 
-    function UpperLowerDigit(string memory _input) public pure returns (bool) {
-        bytes memory inputBytes = bytes(_input);
-        bool hasUpper;
-        bool hasLower;
-        bool hasDigit;
+    function UpperLowerDigit(string memory input) public pure returns (bool) {
+        bool hasUpper = false;
+        bool hasLower = false;
+        bool hasDigit = false;
+
+        bytes memory inputBytes = bytes(input);
 
         for (uint i = 0; i < inputBytes.length; i++) {
             bytes1 char = inputBytes[i];
-            if (!hasUpper && char >= 'A' && char <= 'Z') {
+            if (char >= 0x41 && char <= 0x5A) { 
                 hasUpper = true;
-            } else if (!hasLower && char >= 'a' && char <= 'z') {
-                hasLower = true;
-            } else if (!hasDigit && char >= '0' && char <= '9') {
+            } else if (char >= 0x61 && char <= 0x7A) { 
+            } else if (char >= 0x30 && char <= 0x39) { 
                 hasDigit = true;
             }
-
+        
             if (hasUpper && hasLower && hasDigit) {
                 return true;
             }
         }
-        return false;
+        return hasUpper && hasLower && hasDigit;
     }
 }

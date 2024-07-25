@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "_input",
+						"name": "input",
 						"type": "string"
 					}
 				],
@@ -53,11 +53,11 @@
 	},
 	"sources": {
 		"cordingtest/cordingtest9.sol": {
-			"keccak256": "0xfb505405bf2dd2afb4ebad78e910f6e27ac2e6d6bd1544577dc542ee7538cda8",
+			"keccak256": "0x5516d652969e29a06264468503c2fd1bf0288e1747cd70f2a38f904c8373141b",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://53bcac52868ac74a2764d60a49fd8bb19227cbf7bea1467f466b553984a0cb41",
-				"dweb:/ipfs/QmYGhjSc6BXt6pQ9dBdbEN1sX6V9hb6dVQi67KfdjkBrgD"
+				"bzz-raw://b03ff35b9ecc50f595fab46782abc3f0e5662ec30dab9c4e3e16db7dbedae53c",
+				"dweb:/ipfs/QmNLuTnnS1LKtmyt94vXPE8cRC6dGxxPwQ9wGiSnwxey6C"
 			]
 		}
 	},
