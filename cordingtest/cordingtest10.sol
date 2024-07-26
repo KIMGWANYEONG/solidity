@@ -106,7 +106,7 @@ contract BankSystem {
         require(balances[fromBank][msg.sender] >= amount + TRANSFER_FEE, "Insufficient balance");
         balances[fromBank][msg.sender] -= (amount + TRANSFER_FEE);
         balances[toBank][toUser] += amount;
-        balances[fromBank][address(this)] += TRANSFER_FEE; // Bank collects fee
+        balances[fromBank][address(this)] += TRANSFER_FEE; 
     }
 
     function getTotalBalance(address user) external view returns (uint) {
@@ -135,7 +135,7 @@ contract BankSystem {
 
     function getBankNames() internal view returns (string[] memory) {
         uint count = 0;
-        for (uint i = 0; i < 100; i++) { // Assuming max 100 banks
+        for (uint i = 0; i < 100; i++) { 
             if (banks[uintToString(i)]) {
                 count++;
             }
