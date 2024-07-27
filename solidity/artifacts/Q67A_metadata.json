@@ -1,0 +1,63 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"solidity/solidity61~70.sol": "Q67A"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"solidity/solidity61~70.sol": {
+			"keccak256": "0x33a999071772e6361b007fbaccd8fb04c17824d72b045bbfbb5a968457c0b229",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://700d9910060b19f167a3fac072a14afa9cdf2b5ec82c573d3a1d21b3d248c26f",
+				"dweb:/ipfs/QmXZVMQWPF4xtUSKu51BY4bfWyP167kzZEM4tZEuyPdq9n"
+			]
+		}
+	},
+	"version": 1
+}

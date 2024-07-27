@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "sendEther",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"solidity/solidity61~70.sol": "Q67BB"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"solidity/solidity61~70.sol": {
+			"keccak256": "0x42a57c89f34ce05c6838eb5996f111dde985db9c68ea37072de4f06602ac2424",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://5ee033434760398a76230f2c4b40634e5fdf1ae2bcf01adbf3c0ad9948d6e437",
+				"dweb:/ipfs/QmQDRyRZpa89K8dMaNtrghpX9veJebhUSm8hdbkCAbqVMS"
+			]
+		}
+	},
+	"version": 1
+}
