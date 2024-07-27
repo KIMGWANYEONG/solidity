@@ -46,8 +46,11 @@ contract Q63 {
 /*
 2개 숫자의 차를 나타내는 함수를 구현하세요.
 */
-    function subtract(uint _a, uint _b) public pure returns (uint) {
-        return _a - _b;
+     function Difference(int _a, int _b) public pure returns (int, int) {
+        int diff_a_b = _a - _b;
+        int diff_b_a = _b - _a;
+        
+        return (diff_a_b, diff_b_a);
     }
 }
 
