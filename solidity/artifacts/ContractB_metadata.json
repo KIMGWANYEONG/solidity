@@ -6,24 +6,77 @@
 	"output": {
 		"abi": [
 			{
-				"stateMutability": "payable",
-				"type": "fallback"
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_contractQ79AAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "deposit",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_score",
+						"type": "uint256"
+					}
+				],
+				"name": "addStudent",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "getBalance",
+				"name": "contractQ79A",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "contract IContractQ79A",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTopScoringStudent",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ContractB.Student",
+						"name": "",
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
@@ -32,24 +85,31 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "recipient",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "sendEther",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "students",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "score",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -65,7 +125,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity/solidity61~70.sol": "ContractB"
+			"solidity/solidity71~80.sol": "ContractB"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -79,12 +139,36 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity/solidity61~70.sol": {
-			"keccak256": "0x2c77d81543d450e8e1ba69313d01e7cd927ffc174ff11ae21cd6d6faaf950c3f",
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0x55f102ea785d8399c0e58d1108e2d289506dde18abc6db1b7f68c1f9f9bc5792",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e52e0a7765c943ef14e5bcf11e46e6139fa044be564881378349236bf2e3453",
+				"dweb:/ipfs/QmZEeeXoFPW47amyP35gfzomF9DixqqTEPwzBakv6cZw6i"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0x005ec64c6313f0555d59e278f9a7a5ab2db5bdc72a027f255a37c327af1ec02d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4ece9f0b9c8daca08c76b6b5405a6446b6f73b3a15fab7ff56e296cbd4a2c875",
+				"dweb:/ipfs/QmQyRpyPRL5SQuAgj6SHmbir3foX65FJjbVTTQrA2EFg6L"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SignedMath.sol": {
+			"keccak256": "0x5f7e4076e175393767754387c962926577f1660dd9b810187b9002407656be72",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7d533a1c97cd43a57cd9c465f7ee8dd0e39ae93a8fb8ff8e5303a356b081cdcc",
+				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
+			]
+		},
+		"solidity/solidity71~80.sol": {
+			"keccak256": "0x43f22643f62bfb0fb98d79a734cfad761fb775d943041820cf36dc71023799cc",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://4acee7b756213c93e59731e0528beaf64248f22b03ed37da07f51acc0aedac12",
-				"dweb:/ipfs/QmcLpwM4qYKsf8PEaGxLcKcnuBu3S9veWyFWX5NSGqzYcS"
+				"bzz-raw://494681afd929a01b2a8981b88d02a8ba0c6a4233d82658c839b77f5ebdf62d3e",
+				"dweb:/ipfs/QmbbgXXQFgxitxYaMXuFLLyHjkYwDDzoZ3mf5MAaRCMobq"
 			]
 		}
 	},

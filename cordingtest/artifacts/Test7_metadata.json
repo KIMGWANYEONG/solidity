@@ -12,7 +12,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "accelerate",
+				"name": "accel",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -26,25 +26,29 @@
 			},
 			{
 				"inputs": [],
-				"name": "engineStatus",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
+				"name": "charge",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "fuel",
+				"name": "myCar",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "speed",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Test7.CarStatus",
+						"name": "status",
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -72,34 +76,14 @@
 			},
 			{
 				"inputs": [],
-				"name": "refuel",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "speed",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "turnOffEngine",
+				"name": "turnOff",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "turnOnEngine",
+				"name": "turnOn",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -133,11 +117,11 @@
 	},
 	"sources": {
 		"cordingtest/cordingtest7.sol": {
-			"keccak256": "0xd9b17e6a28a5d01ee6bc22b6cdabc372de83f56a8bf67ce7dcc950d83486c9c9",
+			"keccak256": "0x89630e77baf10c60dfd94c3f5308b96d5a2f0bffdbed6befe7a9bd70f0f1669d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://351fd75f76df1ce900421c5fb6fa38fbc4a6430c678c288fe9f9d1aa222dcd76",
-				"dweb:/ipfs/QmQgXcKPTguexvMmV7nYw3Gmh7P3FLpdos7Qb4PKbrcbgg"
+				"bzz-raw://887f061cd70e8d38882e0bbab0c2a55b4a6785a94e255ece8126ea97d34ebb15",
+				"dweb:/ipfs/QmaiViFSK5BdVu6eot1PRhKFwnh6qiAR9dqCexzivcFNFP"
 			]
 		}
 	},

@@ -13,61 +13,76 @@ contract Test7 {
 --------------------------------------------------------
 충전식 기능 - 지불을 미리 해놓고 추후에 주유시 충전금액 차감 
 */
-
-    uint public speed;
-    uint public fuel;
-    bool public engineStatus; // false for off, true for on
-    uint256 public prepaidBalance;
-
+    enum CarStatus { 
+        Stopped, 
+        Off, 
+        Driving 
+    }
+    
+    struct Car {
+        uint speed;
+        uint gas;
+        CarStatus status;
+    }
+    
+    Car public myCar;
+    uint public prepaidBalance; 
     constructor() {
-        speed = 0;
-        fuel = 100;
-        engineStatus = false;
+        myCar.speed = 0;
+        myCar.gas = 100;
+        myCar.status = CarStatus.Off;
         prepaidBalance = 0;
     }
 
-    function accelerate() public {
-        require(engineStatus == true, "Engine is off");
-        require(fuel > 30, "Not enough fuel");
-        require(speed < 70, "Speed is too high");
 
-        speed += 10;
-        fuel -= 20;
-    }  function refuel() public payable {
-        if (msg.value == 1 ether) {
-            fuel = 100;
-        } else if (prepaidBalance >= 1 ether) {
-            prepaidBalance -= 1 ether;
-            fuel = 100;
-        } else {
-            revert("Insufficient payment");
-        }
+    function accel() public {
+        require(myCar.status == CarStatus.Driving, "The car must be driving.");
+        require(myCar.gas > 30, "Not enough fuel.");
+        require(myCar.speed < 70, "Speed is too high.");
+
+        myCar.speed += 10;
+        myCar.gas -= 20;
     }
 
     function brake() public {
-        require(engineStatus == true, "Engine is off");
-        require(speed > 0, "Car is already stopped");
+        require(myCar.status == CarStatus.Driving, "The car must be driving.");
+        require(myCar.speed > 0, "The car is already stopped.");
 
-        if (speed < 10) {
-            speed = 0;
+        if (myCar.speed < 10) {
+            myCar.speed = 0;
+            myCar.status = CarStatus.Stopped; 
         } else {
-            speed -= 10;
+            myCar.speed -= 10;
         }
-                fuel -= 10;
+        myCar.gas -= 10;
     }
 
-    function turnOffEngine() public {
-        require(speed == 0, "Car must be stopped to turn off engine");
+    function turnOn() public {
+        require(myCar.status == CarStatus.Stopped, "The car must be stopped to turn on the engine.");
 
-        engineStatus = false;
+        myCar.status = CarStatus.Driving;
+        myCar.speed = 0; 
     }
 
-    function turnOnEngine() public {
-        engineStatus = true;
+    function turnOff() public {
+        require(myCar.status == CarStatus.Stopped, "The car must be stopped to turn off the engine.");
+
+        myCar.status = CarStatus.Off;
+    }
+
+    function charge() public payable {
+        if (msg.value == 1 ether) {
+            myCar.gas = 100;
+        } else if (prepaidBalance >= 1 ether) {
+            prepaidBalance -= 1 ether;
+            myCar.gas = 100;
+        } else {
+            revert("Insufficient payment.");
+        }
     }
 
     function prepay() public payable {
-        require(msg.value > 0, "Payment must be greater than 0");
+        require(msg.value > 0, "Payment must be greater than 0.");
 
         prepaidBalance += msg.value;
     }
