@@ -6,53 +6,94 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_number",
-						"type": "uint256"
+						"indexed": true,
+						"internalType": "address",
+						"name": "participant",
+						"type": "address"
 					},
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
+						"indexed": false,
+						"internalType": "uint8[4]",
+						"name": "numbers",
+						"type": "uint8[4]"
 					},
 					{
+						"indexed": false,
+						"internalType": "string[2]",
+						"name": "letters",
+						"type": "string[2]"
+					}
+				],
+				"name": "EntrySubmitted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "participant",
+						"type": "address"
+					},
+					{
+						"indexed": false,
 						"internalType": "uint256",
-						"name": "_score",
+						"name": "prize",
 						"type": "uint256"
 					}
 				],
-				"name": "addStudent",
+				"name": "PrizeDistributed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint8[4]",
+						"name": "numbers",
+						"type": "uint8[4]"
+					},
+					{
+						"indexed": false,
+						"internalType": "string[2]",
+						"name": "letters",
+						"type": "string[2]"
+					}
+				],
+				"name": "WinningNumbersSet",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "distributePrizes",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getAllStudents",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "entries",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "name",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "score",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct Test2.Student[]",
-						"name": "",
-						"type": "tuple[]"
+						"internalType": "address",
+						"name": "participant",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -60,43 +101,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getAverage",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getLowScore",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getScoreSum",
+				"name": "getEntriesCount",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -111,37 +116,134 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_n",
+						"name": "index",
 						"type": "uint256"
 					}
 				],
-				"name": "getStudent",
+				"name": "getEntry",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "name",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "score",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct Test2.Student",
+						"internalType": "uint8[4]",
 						"name": "",
-						"type": "tuple"
+						"type": "uint8[4]"
+					},
+					{
+						"internalType": "string[2]",
+						"name": "",
+						"type": "string[2]"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8[4]",
+						"name": "numbers",
+						"type": "uint8[4]"
+					},
+					{
+						"internalType": "string[2]",
+						"name": "letters",
+						"type": "string[2]"
+					}
+				],
+				"name": "setWinningNumbers",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8[4]",
+						"name": "numbers",
+						"type": "uint8[4]"
+					},
+					{
+						"internalType": "string[2]",
+						"name": "letters",
+						"type": "string[2]"
+					}
+				],
+				"name": "submitEntry",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ticketPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "winningLetters",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "winningNumbers",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -157,7 +259,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"cordingtest/cordingtest2.sol": "Test2"
+			"cordingtest/cordingtest11.sol": "Test2"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -171,12 +273,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"cordingtest/cordingtest2.sol": {
-			"keccak256": "0x6578f866cb64f7d1f8fb7149d8b89590ac09ea9929640ef7f97beb53e5d123b5",
+		"cordingtest/cordingtest11.sol": {
+			"keccak256": "0x15cd82dba62a8fc7f71eeb6b457b69e44d6f84f41c34cba2952d22386edbbbbb",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c7841e0eb5dba3cb270b584679222fd19d25ac122f93a8053aec2396c4cff52c",
-				"dweb:/ipfs/QmWATpAn1BcKMn8RJVJ7JUaL7gPRhgxEz9h6JHM3SucN3D"
+				"bzz-raw://adb4a57f0b2c41930bec06fc18e1769b02a8968079ca7710c81e49d496f8269d",
+				"dweb:/ipfs/QmefAG7vULVUW6S87duSnDHJ5pLKiN8YKJwFhZf3Ae1QZy"
 			]
 		}
 	},
