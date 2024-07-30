@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_plateNumber",
+						"type": "string"
+					}
+				],
+				"name": "enterParking",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_plateNumber",
+						"type": "string"
+					}
+				],
+				"name": "exitParking",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_plateNumber",
+						"type": "string"
+					}
+				],
+				"name": "getParkingFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"cordingtest/cordingtest12.sol": "ParkingSystem"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"cordingtest/cordingtest12.sol": {
+			"keccak256": "0x9db4d0d3768930e2cdb498d9c491e6c34274a42886c5a05290094fba2008a18e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://d87265cee72f841befe4771a8d59b69627ada1658900ab405577bf1b9ea830da",
+				"dweb:/ipfs/QmQrwMoJaZcbzVqCQprpgvgVz6GSDck3iygrSy1fW4UMs9"
+			]
+		}
+	},
+	"version": 1
+}
