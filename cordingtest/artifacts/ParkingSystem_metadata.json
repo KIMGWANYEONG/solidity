@@ -79,11 +79,11 @@
 	},
 	"sources": {
 		"cordingtest/cordingtest12.sol": {
-			"keccak256": "0x9db4d0d3768930e2cdb498d9c491e6c34274a42886c5a05290094fba2008a18e",
+			"keccak256": "0x4b42c1b3b1631217db5e43957fc43b702d5f4217ea2476d321bba6010d174e97",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d87265cee72f841befe4771a8d59b69627ada1658900ab405577bf1b9ea830da",
-				"dweb:/ipfs/QmQrwMoJaZcbzVqCQprpgvgVz6GSDck3iygrSy1fW4UMs9"
+				"bzz-raw://3cf453553348c9d6551de11cc443afbf7b1b391208665eb42301b53475a2a13f",
+				"dweb:/ipfs/QmUESJg9ERcEjQCrJtz7XjC8j4VbP6zMbge4Ph11SSjavH"
 			]
 		}
 	},

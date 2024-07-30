@@ -9,8 +9,8 @@ pragma solidity >= 0.8.2 < 0.9.0;
 차량번호가 숫자로만 이루어진 차량은 20% 할인해주세요.
 차량번호가 문자로만 이루어진 차량은 50% 할인해주세요.
 */
-    contract ParkingSystem {
-   
+
+contract ParkingSystem {
     struct Vehicle {
         uint entryTime;
         bool isParked;
