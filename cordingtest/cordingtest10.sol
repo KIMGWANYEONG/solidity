@@ -53,6 +53,10 @@ contract TaxOffice {
         require(success, "Forced tax collection failed");
         taxDue[user] = 0;
     }
+
+    function getTaxDue(address user) external view returns (uint) {
+        return taxDue[user];
+    }
 }
 
 contract BankSystem {

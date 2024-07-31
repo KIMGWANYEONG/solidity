@@ -50,6 +50,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getTaxDue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "payTax",
 				"outputs": [],
@@ -130,11 +149,11 @@
 	},
 	"sources": {
 		"cordingtest/cordingtest10.sol": {
-			"keccak256": "0xd612efe44e9ef1e5cdee663a62f82860379a53bf4172aceef51d5dffa910c774",
+			"keccak256": "0x2abb8c9c8c37d9821fadcd07e4617c2014c2fdf3f9505386913296dfec0f3eef",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://fb633609bebb3bc139b703d460dafe7639a689029560b7654b717389b1963a68",
-				"dweb:/ipfs/QmbrV8ZHEMGxoUZmBWowD5rARUj55cmQX5ZyELfp8bb9Di"
+				"bzz-raw://da5d0193548e403ee615255e771ac9acd7327d3ae8c3ea1b735efd28d544cb9d",
+				"dweb:/ipfs/QmdbCEZcKL1xbD9zgzEZBX9w5aySBZNEMApKGFUoir7nkY"
 			]
 		}
 	},
