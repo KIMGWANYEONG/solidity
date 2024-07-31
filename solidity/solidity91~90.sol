@@ -310,16 +310,25 @@ contract Q90 {
 당신 지갑의 이름을 알려주세요. 아스키 코드를 이용하여 byte를 string으로 바꿔주세요.
 */
 
-function bytesToString(bytes memory byteArray) public pure returns (string memory) {
+    bytes public walletNameBytes;
+
+    constructor() {
+        walletNameBytes = new bytes(8);
+        walletNameBytes[0] = 0x4D;
+        walletNameBytes[1] = 0x79;
+        walletNameBytes[2] = 0x57;
+        walletNameBytes[3] = 0x61;
+        walletNameBytes[4] = 0x6C;
+        walletNameBytes[5] = 0x6C;
+        walletNameBytes[6] = 0x65;
+        walletNameBytes[7] = 0x74;
+    }
+
+    function bytesToString(bytes memory byteArray) public pure returns (string memory) {
         return string(byteArray);
     }
 
-
-    function walletName() public pure returns (string memory) {
-    
-        bytes memory nameBytes = "MyWallet";
-        
-     
-        return bytesToString(nameBytes);
+    function getWalletName() public view returns (string memory) {
+        return bytesToString(walletNameBytes);
     }
 }
