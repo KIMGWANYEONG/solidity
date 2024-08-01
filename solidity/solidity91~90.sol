@@ -271,7 +271,6 @@ contract OWNER {
     }
 }
 
-
     contract ChangeOwner is Q88 {
     function changeOwner(address newOwner) public {
     
