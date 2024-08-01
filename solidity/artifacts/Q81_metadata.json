@@ -11,26 +11,13 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "account",
+						"name": "from",
 						"type": "address"
 					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "Deposit",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "account",
+						"name": "to",
 						"type": "address"
 					},
 					{
@@ -40,15 +27,8 @@
 						"type": "uint256"
 					}
 				],
-				"name": "Withdraw",
+				"name": "Transfer",
 				"type": "event"
-			},
-			{
-				"inputs": [],
-				"name": "deposit",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
 			},
 			{
 				"inputs": [
@@ -58,7 +38,20 @@
 						"type": "address"
 					}
 				],
-				"name": "getBalance",
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -81,6 +74,10 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -96,7 +93,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity/solidity91~90.sol": "Q81"
+			"solidity/solidity81~90.sol": "Q81"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -110,12 +107,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity/solidity91~90.sol": {
-			"keccak256": "0xd1e577fecdcd4b0d69c62032a0bc90281b633c73535789ccb4cbb6b7e44dce3d",
+		"solidity/solidity81~90.sol": {
+			"keccak256": "0xad1da31ddbbd1ba9f1b228a8f3d53610180bbe2f3dfe2c90c23b3054e24e5697",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c70ce46d539f2ec8bac67ed6d3d9f8700198ac340f4361a4c661c7c72c1fc2cc",
-				"dweb:/ipfs/QmRjFsEuTo9rRGe3JG7Gkxsb13EpDKjiKa5Fi3xY9nYB3K"
+				"bzz-raw://8eb1f5dcbbb6ecfe5849880ffdc8cf1b721554d99eb074a7a30238d42d522fd1",
+				"dweb:/ipfs/QmRkF17cdxzXxqNibJccp62tsQKd8MueboMqCEirfyuaZ7"
 			]
 		}
 	},

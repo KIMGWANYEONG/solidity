@@ -76,13 +76,14 @@ contract Q54 {
 contract Q55 {
 /*배포와 함께 owner를 설정하고 owner를 다른 주소로 바꾸는 것은 오직 owner 스스로만 할 수 있게 하십시오.
 */
-    address public owner;
+  address public owner;
 
     constructor() {
         owner = msg.sender;
     }
 
     function transferOwnership(address newOwner) public {
+        require(msg.sender == owner, "Caller is not the owner");
         owner = newOwner;
     }
 }

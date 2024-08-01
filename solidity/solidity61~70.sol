@@ -6,38 +6,41 @@ contract Q61 {
 /*
 a의 b승을 반환하는 함수를 구현하세요.
 */
-   function power(uint _a, uint _b) public pure returns (uint256) {
-        uint256 result = 1;
-        for (uint256 i = 0; i < _b; i++) {
-            result *= _a;
+    function power(uint _a, uint _b) public pure returns (uint256) {
+        if (_b == 0) {
+            return 1;
+        } else if (_b % 2 == 0) {
+            uint256 halfPower = power(_a, _b / 2);
+            return halfPower * halfPower;
+        } else {
+            return _a * power(_a, _b - 1);
         }
-        return result;
     }
 }
-
 contract Q62 {
 /*
 2개의 숫자를 더하는 함수, 곱하는 함수 a의 b승을 반환하는 함수를 구현하는데 
 3개의 함수 모두 2개의 input값이 10을 넘지 않아야 하는 조건을 최대한 효율적으로 구현하세요.
 */
-
-    function validateInputs(uint _a, uint _b) public pure {
+    
+    modifier Inputs(uint _a, uint _b) {
         require(_a <= 10 && _b <= 10, "Inputs must be between 0 and 10");
+        _;
     }
 
-    function add(uint _a, uint _b) public pure returns (uint) {
-        validateInputs(_a, _b);
+    // Function to add two numbers
+    function add(uint _a, uint _b) public pure Inputs(_a, _b) returns (uint) {
         return _a + _b;
     }
 
-    function multiply(uint _a, uint _b) public pure returns (uint) {
-        validateInputs(_a, _b);
+    // Function to multiply two numbers
+    function multiply(uint _a, uint _b) public pure Inputs(_a, _b) returns (uint) {
         return _a * _b;
     }
 
-    function power(uint _a, uint _b) public pure returns (uint) {
-        validateInputs(_a, _b);
-        return uint(_a) ** _b;
+    // Function to return _a raised to the power of _b
+    function power(uint _a, uint _b) public pure Inputs(_a, _b) returns (uint) {
+        return _a ** _b;
     }
 }
 
@@ -46,11 +49,8 @@ contract Q63 {
 /*
 2개 숫자의 차를 나타내는 함수를 구현하세요.
 */
-     function Difference(int _a, int _b) public pure returns (int, int) {
-        int diff_a_b = _a - _b;
-        int diff_b_a = _b - _a;
-        
-        return (diff_a_b, diff_b_a);
+    function difference(int _a, int _b) public pure returns (int) {
+        return _a - _b;
     }
 }
 

@@ -8,28 +8,29 @@ Contract에 예치, 인출할 수 있는 기능을 구현하세요.
 지갑 주소를 입력했을 때 현재 예치액을 반환받는 기능도 구현하세요.  
 */
 
-    mapping(address => uint256) private balances;
+    mapping(address => uint) private balances;
 
-    event Deposit(address indexed account, uint256 amount);
-    event Withdraw(address indexed account, uint256 amount);
+    event Transfer(address indexed from, address indexed to, uint amount);
 
-    function deposit() external payable {
+    receive() external payable {
         balances[msg.sender] += msg.value;
-
-        emit Deposit(msg.sender, msg.value);
+        emit Transfer(address(0), msg.sender, msg.value);
     }
 
-    function withdraw(uint256 amount) external {
+    function withdraw(uint amount) external {
         require(balances[msg.sender] >= amount, "Insufficient balance");
-
         balances[msg.sender] -= amount;
-        payable(msg.sender).transfer(amount);
-
-        emit Withdraw(msg.sender, amount);
+        (bool success, ) = msg.sender.call{value: amount}("");
+        require(success, "Transfer failed");
+        emit Transfer(msg.sender, address(0), amount);
     }
 
-    function getBalance(address account) external view returns (uint256) {
+    function balanceOf(address account) external view returns (uint) {
         return balances[account];
+    }
+
+    function totalSupply() external view returns (uint) {
+        return address(this).balance;
     }
 }
 
@@ -94,27 +95,17 @@ contract Q84 {
 */
 
     mapping(address => bool) public blacklist;
-    address public owner;
-
-    constructor() {
-        owner = msg.sender;
-    }
 
     modifier notBlacklisted() {
         require(!blacklist[msg.sender], "Your address is blacklisted");
         _;
     }
 
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Only the owner can call this function");
-        _;
-    }
-
-    function addToBlacklist(address _address) public onlyOwner {
+    function addToBlacklist(address _address) public {
         blacklist[_address] = true;
     }
 
-    function removeFromBlacklist(address _address) public onlyOwner {
+    function removeFromBlacklist(address _address) public {
         blacklist[_address] = false;
     }
 
@@ -172,40 +163,37 @@ contract Q86 {
 숫자 변수 2개를 구현하세요. 한개는 찬성표 나머지 하나는 반대표의 숫자를 나타내는 변수입니다. 
 찬성, 반대 투표는 1이더 이상 deposit한 사람만 할 수 있게 제한을 걸어주세요.
 */
+    uint public votesFor;
+    uint public votesAgainst;
 
-    uint256 public votesFor;
-    uint256 public votesAgainst;
+    mapping(address => uint) public deposits;
 
-    mapping(address => uint256) public deposits;
-
-    uint256 constant MIN_DEPOSIT = 1 ether;
+    uint constant MIN_DEPOSIT = 1 ether;
 
     function deposit() public payable {
-        require(msg.value >= MIN_DEPOSIT, "Minimum deposit is 1 ether");
         deposits[msg.sender] += msg.value;
     }
 
     function voteFor() public {
-        require(deposits[msg.sender] >= MIN_DEPOSIT, "You must deposit at least 1 ether to vote");
+        require(deposits[msg.sender] >= MIN_DEPOSIT, "You must deposit at least 1ether");
         votesFor += 1;
     }
 
     function voteAgainst() public {
-        require(deposits[msg.sender] >= MIN_DEPOSIT, "You must deposit at least 1 ether to vote");
+        require(deposits[msg.sender] >= MIN_DEPOSIT, "You must deposit at least 1ether");
         votesAgainst += 1;
     }
 
-    function withdraw(uint256 amount) public {
+    function withdraw(uint amount) public {
         require(deposits[msg.sender] >= amount, "Insufficient balance");
         deposits[msg.sender] -= amount;
         payable(msg.sender).transfer(amount);
     }
 
-    function getDeposit(address user) public view returns (uint256) {
+    function getDeposit(address user) public view returns (uint) {
         return deposits[user];
     }
 }
-
 
 contract Q87 {
 /*
@@ -214,23 +202,22 @@ visibility에 신경써서 구현하세요.
 변화시키는 것도 오직 내부에서만 할 수 있게 해주세요.
 */
 
-    uint256 private a;
+    uint private a;
 
-    function setA(uint256 _value) internal {
+    function setA(uint _value) internal {
         a = _value;
     }
 
-    function incrementA() internal {
-        a += 1;
-    }
-
-    function getA() internal view returns (uint256) {
+    function getA() internal view returns (uint) {
         return a;
     }
 
-    function exampleFunction(uint256 _value) public {
-        setA(_value);   
-        incrementA();  
+    function exampleFunction(uint _value) public {
+        setA(_value);  
+    }
+
+    function retrieveA() public view returns (uint) {
+        return getA(); 
     }
 }
 
@@ -309,25 +296,5 @@ contract Q90 {
 당신 지갑의 이름을 알려주세요. 아스키 코드를 이용하여 byte를 string으로 바꿔주세요.
 */
 
-    bytes public walletNameBytes;
-
-    constructor() {
-        walletNameBytes = new bytes(8);
-        walletNameBytes[0] = 0x4D;
-        walletNameBytes[1] = 0x79;
-        walletNameBytes[2] = 0x57;
-        walletNameBytes[3] = 0x61;
-        walletNameBytes[4] = 0x6C;
-        walletNameBytes[5] = 0x6C;
-        walletNameBytes[6] = 0x65;
-        walletNameBytes[7] = 0x74;
-    }
-
-    function bytesToString(bytes memory byteArray) public pure returns (string memory) {
-        return string(byteArray);
-    }
-
-    function getWalletName() public view returns (string memory) {
-        return bytesToString(walletNameBytes);
-    }
+//모르겠습니다.
 }
